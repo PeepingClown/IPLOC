@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+  <% if (ipData.status === "success"){ %>
+      <p>Country: <%= ipData.country %></p>
+      <p>Region: <%= ipData.regionName %></p>
+      <p>City: <%= ipData.city %></p>
+
+  <% }else if (ipData.status === "fail" && ipData.message === "private range") { %>
+      <p>This is a private IP address</p>
+  <%  } else if(ipData.status==="fail" && ipData.message === "reserved range" && ipData.query === "255.255.255.255"){ %>
+      <p>This is Broadcasting Address</p>
+  <% } else if(ipData.status==="fail" && ipData.message === "reserved range"){ %>
+      <p>This IP belongs in reserved range</p>
+  <% } %>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IPLOC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7fc830eac6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=MuseoModerno:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <style>
+     body
+     {
+       background-color: #a6b1e1;
+     }
+      form
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 200px auto;
+      }
+      input
+      {
+        width: 40%;
+        height: 4em;
+        margin-right: 2%;
+        border-radius: 50px;
+        border: 0px;
+        background-color: #d4ebd0;
+        padding-left: 30px;
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.3),
+                    -4px -4px 8px rgba(255,255,255,0.3),
+                    inset 2px 2px 4px rgba(255,255,255,0.2),
+                    inset -2px -2px 4px rgba(0,0,0,0.2);
+        transition-duration: 0.2s;
+
+      }
+      input:hover
+      {
+        background-color: pink;
+        box-shadow: 4px 4px 12px rgba(0,0,0,0.3),
+                    -4px -4px 12px rgba(255,255,255,0.3),
+                    inset 2px 2px 4px rgba(255,255,255,0.2),
+                    inset -2px -2px 4px rgba(0,0,0,0.2);
+      }
+      input:focus, textarea:focus, select:focus{
+        outline: none;
+      }
+      button
+      {
+        width: 10%;
+        border-radius: 50px;
+        border-width: 0px;
+      }
+      button:focus
+      {
+        outline: none;
+      }
+      .find
+      {
+        background-color: #eb6383;
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.3),
+                    -4px -4px 8px rgba(255,255,255,0.3),
+                    inset 2px 2px 4px rgba(255,255,255,0.2),
+                    inset -2px -2px 4px rgba(0,0,0,0.2);
+        transition-duration: 0.2s;
+        font-family: 'MuseoModerno', cursive;
+        font-size: 1.3rem;
+        border-radius: 20px;
+      }
+      .find:hover
+      {
+        box-shadow: 6px 6px 12px rgba(0,0,0,0.3),
+                    -6px -6px 12px rgba(255,255,255,0.3),
+                    inset 3px 3px 6px rgba(255,255,255,0.2),
+                    inset -3px -3px 6px rgba(0,0,0,0.2);
+      }
+      footer
+      {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        background-color: #424874;
+        box-shadow: 0 -8px 8px rgba(0,0,0, 0.15);
+      }
+      p
+      {
+        color: #f4eeff;
+        font-size: 0.8rem;
+        margin: 20px 0px 0px 0px;
+
+      }
+      i
+      {
+        color: #dcd6f7;
+        margin: 20px 10px;
+
+      }
+      .contact
+      {
+        height: 60px;
+        border-radius: 50px;
+        margin: 10px auto;
+        background-color: #ff9234;
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.3),
+                    -4px -4px 8px rgba(255,255,255,0.2),
+                    inset 2px 2px 4px rgba(255,255,255,0.2),
+                    inset -2px -2px 4px rgba(0,0,0,0.2);
+        font-family: 'Fredoka One', cursive;
+        transition-duration: 0.2s;
+      }
+      .contact:hover
+      {
+        box-shadow: 6px 6px 12px rgba(0,0,0,0.3),
+                    -6px -6px 12px rgba(255,255,255,0.2),
+                    inset 3px 3px 6px rgba(255,255,255,0.2),
+                    inset -3px -3px 6px rgba(0,0,0,0.2);
+      }
+      .mail
+      {
+        color: black;
+      }
+      .mail:hover
+      {
+        color:black;
+      }
+      .gimg
+      {
+        margin: 0px;
+        color: #3e64ff;
+      }
+      .brnd
+      {
+        font-size: 2em;
+        font-family: 'Bungee Inline', cursive;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand brnd" href="#">IPL<i class="fas gimg fa-globe-americas"></i>C</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<form action="/" method="post">
+  <input class="t" type="text" name="IP" placeholder="Enter IPv4/IPv6/domain">
+  <button class="find" type="submit" name="button">Find</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+<footer>
+
+  <a target="_blank" href="https://www.facebook.com/profile.php?id=100005013193473"><i class="fab fa-facebook-square fa-2x"></i></a>
+  <a target="_blank" href="https://www.linkedin.com/in/mayanka-chattopadhyay-77261517b/"><i class="fab fa-linkedin fa-2x"></i></a>
+  <a target="_blank" href="https://github.com/PeepingClown"><i class="fab fa-github-square fa-2x"></i></a>
+  <a target="_blank" href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram fa-2x"></i></a>
+  <div>
+    <button class="contact" type="button"><a class="mail" href="mailto:jodu892@hmail.com" style="text-decoration: none;">Contact Me</a></button>
+  </div>
+
+  <p>Copyright Mayanka Chattopadhyay @ 2020</p>
+</footer>
+</html>
